@@ -1,19 +1,28 @@
 # FiveM-Projects
 
 ## Resources
-### Rappel
-https://github.com/Elvasius/FiveM-Rappel
+### Rappel </br>
+https://www.youtube.com/watch?v=s1nF3YapO14
 ### Screen to World
-https://github.com/Elvasius/FiveM-Screen-To-World
+https://www.youtube.com/watch?v=f-o5Ykcn2oA
 ### Pool
-https://github.com/Elvasius/FiveM-Pool
-### Raycast
-https://github.com/Elvasius/FiveM-Raycast-Test
+https://www.youtube.com/watch?v=zF0L7yxJmnI
+### Cargo plane loading
+https://www.youtube.com/watch?v=a18sZxt1Bz8
+### Spray paint truck
+https://www.youtube.com/watch?v=S1tegaHBMJQ
 
 ## Proof of Concepts
-
 ### Forensics
 https://www.youtube.com/watch?v=5jj9avT1MFw
 
 ### Graffiti
 https://www.youtube.com/watch?v=FsB7jdkmGlM
+
+# RedM-Projects
+### Rust/Valheim like build system
+https://www.youtube.com/watch?v=-QwgvTx2zyQ
+### Drag mechanic
+https://www.youtube.com/watch?v=g9v-2ErVIHI
+### Horse custom prop attach
+https://www.youtube.com/watch?v=o-eLTuopcAg
