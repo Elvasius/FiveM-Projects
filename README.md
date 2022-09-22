@@ -31,3 +31,5 @@ https://www.youtube.com/watch?v=g9v-2ErVIHI
 https://www.youtube.com/watch?v=o-eLTuopcAg
 ### Vulture leading to downed players
 https://www.youtube.com/watch?v=fsXsohMPrlM
+### Hot Air Balloon
+https://www.youtube.com/watch?v=U5hYrVzZFbs
