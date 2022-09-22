@@ -34,6 +34,6 @@ https://www.youtube.com/watch?v=fsXsohMPrlM
 ### Hot Air Balloon
 https://www.youtube.com/watch?v=U5hYrVzZFbs
 ### Bear Trap
-https://www.youtube.com/watch?v=d1XhuhHXKm0 (player runs fast => traps gets stuck on player)
-https://www.youtube.com/watch?v=kC5nDSczE8U (player runs fast => player trips)
+https://www.youtube.com/watch?v=d1XhuhHXKm0 (player runs fast => traps gets stuck on player) </br>
+https://www.youtube.com/watch?v=kC5nDSczE8U (player runs fast => player trips) </br>
 https://www.youtube.com/watch?v=Kbqa5I2W8Zo (player walks => both player and trap are stuck in place)
