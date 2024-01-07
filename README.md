@@ -14,14 +14,16 @@ https://www.youtube.com/watch?v=S1tegaHBMJQ
 ### Custom Weather
 https://www.youtube.com/watch?v=wQnz-VvuMnA </br>
 https://www.youtube.com/watch?v=6JHsseZNOgc
-### Native Text Editing (no DUI)
-https://www.youtube.com/watch?v=A9OqGk6vRp8
+
 ## Proof of Concepts
 ### Forensics
 https://www.youtube.com/watch?v=5jj9avT1MFw
 
 ### Graffiti
 https://www.youtube.com/watch?v=FsB7jdkmGlM
+
+### Native Text Editing (no DUI)
+https://www.youtube.com/watch?v=A9OqGk6vRp8
 
 ### Dog Fight
 https://www.youtube.com/watch?v=0uQOqqBC8iM
