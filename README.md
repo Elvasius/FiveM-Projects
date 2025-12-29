@@ -1,10 +1,35 @@
 # FiveM and RedM Project Examples
-This repository contains videos and a short description of the background/goal and how I tackled each project I made for FiveM and RedM. A lot of these projects are fairly rough, proof-of-concepts, which I made to try out certain fuctionalities within these platforms
+This repository contains videos and a short description of the background/goal and how I tackled each project I made for FiveM and RedM. A lot of these projects are fairly rough, proof-of-concepts, which I made to try out certain fuctionalities within these platforms.
 ## FiveM-Projects
+
+### Notebook
+Video: https://www.youtube.com/watch?v=arIOmHJ5_T8
+
+The actual notebook part of this project was fairly simple to do, the interesting parts came from some of the technical aspects, such as the pictures representing physical items in the inventory. However, the most interesting part for this project was figuring out how to properly store the drawings on each page. I didn't want to just save them as images because that would be very ineffecient. In the end I chose to use a combination of run-length encoding and variable-length encoding. The main reason behind this choice was to ensure that large spaces of the same color could be encoded effeciently, as well as making sure spaces with only a couple of same color pixels could be encoded with just a single byte instead of using 32 bit integers for everything. Another advantage of this method is that it's really fast to encode/decode the drawings. The final encoded size will, of course, also depend on the resolution of the canvas, so there is also a choice to make between the quality of the drawings and storage. However, changing the resolution is pretty simple as well. 
+
 ### Rappel
 Video: https://www.youtube.com/watch?v=s1nF3YapO14
 
 The weird part of this project is that, for some reason, I could not get to work with Lua (certain natives didn't work properly and there was also a thread on this on the forum with similar issues). To solve this problem, I had to switch over to C#, which wasn't thad bad as I have quite a lot of experience with C#. At the time when I was making this, ropes were also not synchronized accross the network, so I had to write my own synchronization code (which required a lot of optimization to make sure that there was a good balance between performance and real-timeliness of the synchronization). 
+
+### Watertruck
+Video Filling: https://www.youtube.com/watch?v=pjwxjCU1a-k </br>
+Video Rope Collision: https://www.youtube.com/watch?v=IUDqZBNN7yQ </br>
+Video Filling Container with Overflow: https://www.youtube.com/watch?v=FcNOqiyYNE0
+
+For this project I wanted to combine some rope and water natives. My first idea was to use the native that allows you to change the water level of a water quad, so it would be possible to drain a pool, lake etc... However, it seems that most of the water sources in GTA don't make use of water quads. Luckily, an entity still counts as being inside water when standing inside non-water quad water (so the whole filling up the tanker part still works nicely). I also made sure that the rope that acts as the pump breaks whenever there is something colliding with it. This was pretty easy to do using the shape test natives, with of course making sure that there isn't a big hit on the performance. It's also possible to fill certain containers, for these I also made it so the pump doesn't automatically stop whenever the container is filled. So if the player isn't careful the container will start overflowing, which is indicated by a water particle effect.
+
+### Graffiti
+Video: https://www.youtube.com/watch?v=FsB7jdkmGlM
+
+This resource was the very first programming I ever did in FiveM. The concept of DUIs really fascinated me, and the first thing I thought about was how it could be used to implement a graffiti system. It was an interesting choice to pick as the first thing to program, mainly because I needed to utilize a lot of different aspects of FiveM modding. For the DUI itself, I needed to create an interface that could interact with Lua which then could be displayed on an asset I made, and that asset also had to be transparent but still have collision etc... 
+
+
+### Native Text Editing (no DUI)
+Video: https://www.youtube.com/watch?v=A9OqGk6vRp8
+
+One of the big downsides of using DUI is the heavy computational requirements, with this project I wanted to see if using the native DUI-like (i.e., 3D ScaleForms) functionality that is included in GTA could be used as a replacement. This project was really interesting because there wasn't that much research out there about using 3D ScaleForms, so I had to do a lot of digging through the decompiled scripts to see how they could be used. Although, you can get some nice results, performance is not that much better and you are much more limited in what you can do.
+
 ### Screen to World
 Video: https://www.youtube.com/watch?v=f-o5Ykcn2oA
 
@@ -13,7 +38,7 @@ Before I got into FiveM programming, I had a period where I really was into lear
 ### Pool
 Video: https://www.youtube.com/watch?v=zF0L7yxJmnI
 
-Because physics and (especially) client synchronization in FiveM are a bit wonky, I decided I would make my own small physics engine that I could use to implement the pool game. At the time m so I had to do a lot of research on how the physics behind a pool game would work. This was pretty fun, because the "FiveM" aspect of this project mainly came down to optimizing  
+Because physics and (especially) client synchronization in FiveM are a bit wonky, I decided I would make my own small physics engine that I could use to implement the pool game. At the time m so I had to do a lot of research on how the physics behind a pool game would work. This was pretty fun, because the "FiveM" aspect of this project mainly came down to optimizing.
 
 ### Cargo plane loading
 Video: https://www.youtube.com/watch?v=a18sZxt1Bz8
@@ -37,17 +62,6 @@ Video: https://www.youtube.com/watch?v=5jj9avT1MFw
 The goal of this project was to see out how ThreeJS could be incorperated within FiveM UIs to allow for easier interaction with 3D objects, as well as customizing these objects with certain decals (e.g., blood).
 
 
-### Graffiti
-Video: https://www.youtube.com/watch?v=FsB7jdkmGlM
-
-This resource was the very first programming I ever did in FiveM. The concept of DUIs really fascinated me, and the first thing I thought about was how it could be used to implement a graffiti system. It was an interesting choice to pick as the first thing to program, mainly because I needed to utilize a lot of different aspects of FiveM modding. For the DUI itself, I needed to create an interface that could interact with Lua which then could be displayed on an asset I made, and that asset also had to be transparent but still have collision etc... 
-
-
-### Native Text Editing (no DUI)
-Video: https://www.youtube.com/watch?v=A9OqGk6vRp8
-
-One of the big downsides of using DUI is the heavy computational requirements, with this project I wanted to see if using the native DUI-like (i.e., 3D ScaleForms) functionality that is included in GTA could be used as a replacement. This project was really interesting because there wasn't that much research out there about using 3D ScaleForms, so I had to do a lot of digging through the decompiled scripts to see how they could be used. Although, you can get some nice results, performance is not that much better and you are much more limited in what you can do.
-
 ### Dog Fight
 Video: https://www.youtube.com/watch?v=0uQOqqBC8iM
 
@@ -59,9 +73,9 @@ Video: https://youtu.be/GXzAVj_8tEE
 Very simple resource, a 3x3 grid with scratch ticket mechanics. I probably want to extend this so players will be able to freely choose the symbols, rarity, and payout.
 
 ### Hacking Minigames
-Video: https://youtu.be/1qCpW5LWsxA </br>
-Video: https://youtu.be/we_t7vMoCSg
-
+Video Minigame 1: https://youtu.be/1qCpW5LWsxA </br>
+Video Minigame 2: https://youtu.be/we_t7vMoCSg </br>
+Video Minigame 3: https://youtu.be/ywEALrKMPuw
 A very common thing to see every server. Nothing too special, but wanted to see if I could replicate some hacking minigames that appear in other games.
 
 # RedM-Projects
