@@ -76,6 +76,7 @@ Very simple resource, a 3x3 grid with scratch ticket mechanics. I probably want 
 Video Minigame 1: https://youtu.be/1qCpW5LWsxA </br>
 Video Minigame 2: https://youtu.be/we_t7vMoCSg </br>
 Video Minigame 3: https://youtu.be/ywEALrKMPuw
+
 A very common thing to see every server. Nothing too special, but wanted to see if I could replicate some hacking minigames that appear in other games.
 
 # RedM-Projects
